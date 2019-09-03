@@ -31,8 +31,11 @@ img {
 		<div class="row">
 			<div class="col-lg-12">
 				<h1>
-					Hello,
-					<%=request.getParameter("name")%>
+					这是源组件JSP - jsp002.jsp，转发标签之前的内容...
+				</h1>
+				<jsp:forward page="jsp003.jsp?name=渣渣辉"></jsp:forward>
+				<h1>
+					这是源组件JSP - jsp002.jsp，转发标签之后的内容...
 				</h1>
 			</div>
 		</div>

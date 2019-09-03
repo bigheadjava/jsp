@@ -31,9 +31,9 @@ img {
 		<div class="row">
 			<div class="col-lg-12">
 				<h1>
-					Hello,
-					<%=request.getParameter("name")%>
+					您好, <%=request.getParameter("name") %>，这是目标组件JSP - jsp003.jsp...
 				</h1>
+				
 			</div>
 		</div>
 

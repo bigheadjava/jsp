@@ -29,7 +29,12 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1><a href="<%=request.getContextPath()%><%=request.getContextPath()%><%=request.getContextPath()%>001.jsp?name=张三">第一个jsp例子</a></h1>
+				<h1><a href="jsp001.jsp?name=张三" target="#">第一个jsp例子</a></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h1><a href="jsp002.jsp?name=张三" target="#">请求转发&lt;jsp:forward&gt;</a></h1>
 			</div>
 		</div>
 		

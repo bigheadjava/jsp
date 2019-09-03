@@ -1,5 +1,6 @@
 <%@page language="java" pageEncoding="utf-8"%>
-<img src="<%=request.getContextPath()%>/images/top1.jpg" class="img-responsive">
+<img src="<%=request.getContextPath()%>/images/top1.jpg"
+	class="img-responsive">
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="navbar-header">
@@ -12,8 +13,9 @@
 		<a class="navbar-brand" href="#">JSP学习案例</a>
 	</div>
 	<div class="collapse navbar-collapse" id="menu">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="/jsp/jsp/index.jsp">首页</a></li>
+		<ul class="nav navbar-nav" >
+			<li class="active"><a
+				href="<%=request.getContextPath()%>/jsp/index.jsp">首页</a></li>
 			<li><a href="<%=request.getContextPath()%>/jsp/jsp-basic.jsp">JSP基础</a></li>
 			<li><a href="#">JSP访问JavaBean</a></li>
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -31,3 +33,19 @@
 		</ul>
 	</div>
 </nav>
+
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/js/jquery-1.12.js"></script>
+<script>
+	
+	$(function () {
+        $(".navbar-nav").find("li").each(function () {
+            var a = $(this).find("a:first");
+            if ($(a).attr("href") == location.pathname) {
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
+            }
+        });
+    });
+</script>
