@@ -28,6 +28,14 @@ img {
 
 </head>
 <body>
+	<%
+					
+		String loginName = (String)session.getAttribute("loginName");
+		if(loginName != null) {	
+			//response.sendRedirect("index.jsp");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+		}
+	%>
 	<div class="container">
 	<form method="post" action="/jsp/login" class="form-horizontal">
 		<div class="row">
@@ -42,14 +50,6 @@ img {
 				<% }%>
 			</div>
 		</div>
-		<%
-					if(!session.isNew()) {
-				%>
-					欢迎您，<%= session.getAttribute("loginName")%> !<br>
-					Session ID: <%= session.getId() %>
-				<%
-					}
-				%>
 		<div class="row" id="div01">
 			<div class="form-group">
 				<label for="userName" class="col-lg-4 text-right">用户名</label>

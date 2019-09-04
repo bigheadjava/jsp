@@ -27,7 +27,9 @@ img {
 			userName = (String) session.getAttribute("loginName");
 			if (userName == null) {
 				String msg = URLEncoder.encode("对不起，请先进行登陆!","utf-8");
-				response.sendRedirect("login.jsp?msg=" + msg);
+				//response.sendRedirect("/jsp/login.jsp?msg=" + msg);
+				request.getRequestDispatcher("login.jsp?msg=" + msg).forward(request, response);
+				
 			}
 		} else {
 			session.setAttribute("loginName", userName);
@@ -46,10 +48,8 @@ img {
 				<h1>这里将展示JSP学习案例链接</h1>
 				<%
 					if(!session.isNew()) {
-				%>
-					欢迎您，<%= session.getAttribute("loginName")%> !<br>
-					Session ID: <%= session.getId() %>
-				<%
+						String loginName = (String)session.getAttribute("loginName");
+						out.println("欢迎您，" + loginName + "!");
 					}
 				%>
 			</div>
