@@ -32,7 +32,6 @@ img {
 					
 		String loginName = (String)session.getAttribute("loginName");
 		if(loginName != null) {	
-			//response.sendRedirect("index.jsp");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 	%>
@@ -49,7 +48,7 @@ img {
 					<font color="red"><%= request.getParameter("msg") %></font>
 				<% }%>
 			</div>
-		</div>
+		</div>	
 		<div class="row" id="div01">
 			<div class="form-group">
 				<label for="userName" class="col-lg-4 text-right">用户名</label>

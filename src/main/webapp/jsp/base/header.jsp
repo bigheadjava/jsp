@@ -10,7 +10,7 @@
 				class="icon-bar"></span> <span class="icon-bar"></span> <span
 				class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">JSP学习案例</a>
+		<a class="navbar-brand" href="jsp/logout.jsp">注销</a>
 	</div>
 	<div class="collapse navbar-collapse" id="menu">
 		<ul class="nav navbar-nav" >
