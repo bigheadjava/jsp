@@ -1,4 +1,4 @@
-package com.cheer.filter;
+package com.cheer.bean;
 
 import java.io.Serializable;
 
