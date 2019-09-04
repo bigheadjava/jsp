@@ -34,10 +34,24 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-12">
-				<h1><a href="jsp002.jsp?name=张三" target="#">请求转发&lt;jsp:forward&gt;</a></h1>
+				<h1><a href="jsp002.jsp?name=张三" target="#">请求转发&nbsp;&lt;jsp:forward&gt;</a></h1>
 			</div>
 		</div>
-		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1><a href="jsp004.jsp" target="#">请求转发&nbsp;&lt;jsp:forward&gt;&nbsp;多个参数</a></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h1><a href="jsp006.jsp" target="#">静态包含:&nbsp;include指令</a></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h1><a href="jsp007.jsp" target="#">动态包含:&nbsp;&lt;jsp:include&gt;</a></h1>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-lg-12">
 				 <%@include file="base/footer.jsp"%>

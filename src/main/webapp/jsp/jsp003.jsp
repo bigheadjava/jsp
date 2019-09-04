@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>第一个JSP案例</title>
+<title>请求转发</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"

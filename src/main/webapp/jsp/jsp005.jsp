@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>请求转发</title>
+<title>多参数请求转发</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"
@@ -31,12 +31,10 @@ img {
 		<div class="row">
 			<div class="col-lg-12">
 				<h1>
-					这是源组件JSP - jsp002.jsp，转发标签之前的内容...
+					这是目标组件JSP - jsp005.jsp...
+					您好, 我叫<%=request.getParameter("name") %>，我今年<%=request.getParameter("age") %>，我来自<%=request.getParameter("birth_place") %>...
 				</h1>
-				<jsp:forward page="jsp003.jsp?name=渣渣辉"></jsp:forward>
-				<h1>
-					这是源组件JSP - jsp002.jsp，转发标签之后的内容...
-				</h1>
+				
 			</div>
 		</div>
 

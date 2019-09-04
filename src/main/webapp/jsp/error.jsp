@@ -1,8 +1,10 @@
 <%@page language="java" pageEncoding="utf-8"%>
+<%@page isErrorPage="true"%>
+<%@page import="java.io.PrintWriter"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>请求转发</title>
+<title>错误页面</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"
@@ -27,18 +29,21 @@ img {
 				<%@include file="base/header.jsp"%>
 			</div>
 		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				服务器发生故障: <%= exception.getMessage() %>
+			</div>
+		</div>
 
 		<div class="row">
 			<div class="col-lg-12">
-				<h1>
-					这是源组件JSP - jsp002.jsp，转发标签之前的内容...
-				</h1>
-				<jsp:forward page="jsp003.jsp?name=渣渣辉"></jsp:forward>
-				<h1>
-					这是源组件JSP - jsp002.jsp，转发标签之后的内容...
-				</h1>
+				故障原因: <%
+					exception.printStackTrace(new PrintWriter(out));
+				%>
 			</div>
 		</div>
+		
 
 		<div class="row">
 			<div class="col-lg-12">
