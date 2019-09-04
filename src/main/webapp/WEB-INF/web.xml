@@ -7,7 +7,7 @@
 	
 	<welcome-file-list>
 		<welcome-file>
-			/jsp/index.jsp
+			/jsp/login.jsp
 		</welcome-file>
 	</welcome-file-list>
 	
