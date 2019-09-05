@@ -17,7 +17,7 @@
 			<li class="active"><a
 				href="<%=request.getContextPath()%>/jsp/index.jsp">首页</a></li>
 			<li><a href="<%=request.getContextPath()%>/jsp/jsp-basic.jsp">JSP基础</a></li>
-			<li><a href="#">JSP访问JavaBean</a></li>
+			<li><a href="<%=request.getContextPath()%>/jsp/access-javabean.jsp">JSP访问JavaBean</a></li>
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">JSTL标签 <b class="caret"></b></a>
 				<ul class="dropdown-menu">
