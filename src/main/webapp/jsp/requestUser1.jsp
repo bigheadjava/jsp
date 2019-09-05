@@ -1,6 +1,7 @@
 <%@page language="java" pageEncoding="utf-8"%>
 <%@page isErrorPage="true"%>
 <%@page import="com.cheer.bean.UserBean"%>
+<%@ page isELIgnored ="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +40,7 @@ img {
 				</div>
 			</div>
 		</div>
+		
 		<div class="row">
 			<div class="col-lg-12">
 				<%

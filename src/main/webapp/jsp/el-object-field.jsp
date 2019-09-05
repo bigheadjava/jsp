@@ -1,11 +1,8 @@
 <%@page language="java" pageEncoding="utf-8"%>
-<%@page isErrorPage="true"%>
-<%@page import="com.cheer.bean.UserBean"%>
-<%@ page isELIgnored ="false" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>JavaBean在request范围内</title>
+<title>EL访问对象属性</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"
@@ -33,28 +30,15 @@ img {
 
 		<div class="row">
 			<div class="col-lg-12">
-				<jsp:useBean id="userBean" class="com.cheer.bean.UserBean"
-					scope="request"></jsp:useBean>
-				<jsp:setProperty name="userBean" property="age" value="<%=userBean.getAge() + 1 %>" />
-				<div class="h3">
-					Age:&nbsp;<jsp:getProperty name="userBean" property="age" />
-					
-				</div>
+				<h1>
+					艺人信息:<br>
+				</h1>
+				姓名:&nbsp;${andyLau.name}<br>
+					年龄:&nbsp;${andyLau.age}<br>
+					性别:&nbsp;${andyLau["gender"]}
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<%
-					String[] scopeNames = {"No Scope","page","request","session","application"};
-					int scope = pageContext.getAttributesScope("userBean");
-				%>
-				<div class="h3">
-					userBean的Scope:&nbsp;<%= scopeNames[scope] %>
-					<jsp:forward page="requestUser1.jsp"></jsp:forward>
-				</div>
-			</div>
-		</div>
-		
+
 		<div class="row">
 			<div class="col-lg-12">
 				<%@include file="base/footer.jsp"%>

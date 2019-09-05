@@ -1,11 +1,8 @@
 <%@page language="java" pageEncoding="utf-8"%>
-<%@page isErrorPage="true"%>
-<%@page import="com.cheer.bean.UserBean"%>
-<%@ page isELIgnored ="false" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>JavaBean在request范围内</title>
+<title>EL隐含对象</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"
@@ -33,28 +30,29 @@ img {
 
 		<div class="row">
 			<div class="col-lg-12">
-				<jsp:useBean id="userBean" class="com.cheer.bean.UserBean"
-					scope="request"></jsp:useBean>
-				<jsp:setProperty name="userBean" property="age" value="<%=userBean.getAge() + 1 %>" />
-				<div class="h3">
-					Age:&nbsp;<jsp:getProperty name="userBean" property="age" />
-					
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<%
-					String[] scopeNames = {"No Scope","page","request","session","application"};
-					int scope = pageContext.getAttributesScope("userBean");
-				%>
-				<div class="h3">
-					userBean的Scope:&nbsp;<%= scopeNames[scope] %>
-					<jsp:forward page="requestUser1.jsp"></jsp:forward>
-				</div>
+				<h1>
+					表示Http请求的数据: 
+				</h1>
+				<h4>
+					Host: &nbsp; ${header.host } <br>
+					Param: &nbsp; ${param.userName } <br>
+				</h4>
+				<hr>
+				<h4>
+					从request范围内获取requestAttr: ${requestScope.requestAttr}<br>
+					从session范围内获取requestAttr: ${sessionScope.requestAttr}<br>
+					从request范围内获取sessionAttr: ${requestScope.sessionAttr}<br>
+					从session范围内获取sessionAttr: ${sessionScope.sessionAttr}<br>
+					从application范围内获取applicationAttr: ${applicationScope.applicationAttr}<br>
+				</h4>
+				<hr>
+				<h4>
+					获取Web应用参数: ${initParam.ProjectName}
+				</h4>
 			</div>
 		</div>
 		
+
 		<div class="row">
 			<div class="col-lg-12">
 				<%@include file="base/footer.jsp"%>

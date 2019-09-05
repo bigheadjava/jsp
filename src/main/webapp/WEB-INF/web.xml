@@ -19,4 +19,8 @@
 		<error-code>404</error-code>
 		<location>/html/404.html</location>
 	</error-page>
+	<context-param>
+		<param-name>ProjectName</param-name>
+		<param-value>JSP学习</param-value>
+	</context-param>
 </web-app>

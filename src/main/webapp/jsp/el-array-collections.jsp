@@ -1,11 +1,8 @@
 <%@page language="java" pageEncoding="utf-8"%>
-<%@page isErrorPage="true"%>
-<%@page import="com.cheer.bean.UserBean"%>
-<%@ page isELIgnored ="false" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>JavaBean在request范围内</title>
+<title>EL访问数组和集合</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"
@@ -33,28 +30,50 @@ img {
 
 		<div class="row">
 			<div class="col-lg-12">
-				<jsp:useBean id="userBean" class="com.cheer.bean.UserBean"
-					scope="request"></jsp:useBean>
-				<jsp:setProperty name="userBean" property="age" value="<%=userBean.getAge() + 1 %>" />
-				<div class="h3">
-					Age:&nbsp;<jsp:getProperty name="userBean" property="age" />
-					
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<%
-					String[] scopeNames = {"No Scope","page","request","session","application"};
-					int scope = pageContext.getAttributesScope("userBean");
-				%>
-				<div class="h3">
-					userBean的Scope:&nbsp;<%= scopeNames[scope] %>
-					<jsp:forward page="requestUser1.jsp"></jsp:forward>
-				</div>
+				<h1>
+					获取数组skillArray中第2个元素: &nbsp; ${skillArray[1]}
+				</h1>
 			</div>
 		</div>
 		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					获取List - cityList中第2个元素: &nbsp; ${cityList[1]}
+				</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					获取Set - languageSet中第1个元素: &nbsp; ${languageSet.toArray()[0]}
+					<br>
+					获取Set - languageSet中第2个元素: &nbsp; ${languageSet.toArray()[1]}
+					<br>
+					获取Set - languageSet中第3个元素: &nbsp; ${languageSet.toArray()[2]}
+					<br>
+					获取Set - languageSet中第4个元素: &nbsp; ${languageSet.toArray()[3]}
+					<br>
+					获取Set - languageSet中第5个元素: &nbsp; ${languageSet.toArray()[4]}
+					<br>
+				</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					获取Map - studentMap中第1个元素的值: &nbsp; ${studentMap.S001}
+					<br>
+					获取Map - studentMap中第2个元素的值: &nbsp; ${studentMap.S002}
+					<br>
+					获取Map - studentMap中第3个元素的值: &nbsp; ${studentMap.S003}
+					<br>
+				</h1>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="col-lg-12">
 				<%@include file="base/footer.jsp"%>
