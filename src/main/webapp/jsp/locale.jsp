@@ -58,6 +58,21 @@ img {
 				</p>
 			</div>
 		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-3">
+				<a href="<%=request.getContextPath()%>/zh_page" class="btn btn-default btn-success">中文资源文件</a>
+			</div>
+			<div class="col-lg-3">
+				<a href="<%=request.getContextPath()%>/en_page" class="btn btn-default btn-success">英文资源文件</a>
+			</div>
+			<div class="col-lg-3">
+				<a href="<%=request.getContextPath()%>/zh_msg_page" class="btn btn-default btn-success">中文校验信息</a>
+			</div>
+			<div class="col-lg-3">
+				<a href="<%=request.getContextPath()%>/en_msg_page" class="btn btn-default btn-success">英文校验信息</a>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-lg-12">
 				<%@include file="base/footer.jsp"%>
