@@ -225,6 +225,20 @@ img {
 		</div>
 		
 		<div class="row">
+			<div class="col-lg-3">
+				&lt;c:redirect&gt;标签
+			</div>
+			<div class="col-lg-4">
+				<c:redirect url="jsp/c-url.jsp" >
+					<c:param name="word1" value="Hello,"></c:param>
+					<c:param name="word2" value="JSP!"></c:param>
+				</c:redirect>
+			</div>
+			<div class="col-lg-5">
+			</div>
+		</div>
+		
+		<div class="row">
 			<div class="col-lg-12">
 				<%@include file="base/footer.jsp"%>
 			</div>

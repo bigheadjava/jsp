@@ -21,6 +21,7 @@
 			<li><a href="<%=request.getContextPath()%>/jsp/access-javabean.jsp">JSP访问JavaBean</a></li>
 			<li><a href="<%=request.getContextPath()%>/jsp/el.jsp">EL表达式</a></li>
 			<li><a href="<%=request.getContextPath()%>/jstl-tag">JSTL标签</a></li>
+			<li><a href="<%=request.getContextPath()%>/mylocale">Locale</a></li>
 		</ul>
 	</div>
 </nav>

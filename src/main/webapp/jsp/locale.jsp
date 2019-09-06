@@ -1,13 +1,8 @@
 <%@page language="java" pageEncoding="utf-8"%>
-<%@page isErrorPage="true"%>
-<%@page import="com.cheer.bean.UserBean"%>
-
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>错误页面</title>
+<title>Locale测试</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"
@@ -35,14 +30,34 @@ img {
 
 		<div class="row">
 			<div class="col-lg-12">
-				<jsp:useBean id="userBean" class="com.cheer.bean.UserBean"
-					scope="request"></jsp:useBean>
-				<jsp:setProperty property="age" name="userBean" value="18" />
-				<jsp:getProperty property="age" name="userBean" />
+				<p>
+					客户优先使用的Locale:&nbsp;
+					<c:out value="${firstLocale.displayName}"></c:out>
+					<br>
+					<c:out value="${firstLocale.language}"></c:out>
+					<br>
+					<c:out value="${firstLocale.country}"></c:out>
+					<br>
+				</p>
 			</div>
 		</div>
-
-
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<p>
+					客户所有Locale:&nbsp;
+					<c:forEach var="tempLocale" items="${allLocales }" varStatus="status">
+						第${status.count }个Locale:&nbsp;<br>
+						<c:out value="${tempLocale.displayName}"></c:out>
+						<br>
+						<c:out value="${tempLocale.language}"></c:out>
+						<br>
+						<c:out value="${tempLocale.country}"></c:out>
+					<br>
+					</c:forEach>
+				</p>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-lg-12">
 				<%@include file="base/footer.jsp"%>
