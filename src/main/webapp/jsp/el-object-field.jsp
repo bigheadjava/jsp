@@ -36,6 +36,7 @@ img {
 				姓名:&nbsp;${andyLau.name}<br>
 					年龄:&nbsp;${andyLau.age}<br>
 					性别:&nbsp;${andyLau["gender"]}
+					
 			</div>
 		</div>
 

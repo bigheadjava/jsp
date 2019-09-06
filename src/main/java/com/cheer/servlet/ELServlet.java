@@ -26,7 +26,7 @@ public class ELServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		UserBean andyLau = new UserBean("刘德华",62,'男');
+		UserBean andyLau = new UserBean("刘德华",62,"男");
 		
 		String[] skillArray = { "Java", "JQuery", "HTML5", "Spring", "Oracle" };
 		

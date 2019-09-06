@@ -1,7 +1,7 @@
 <%@page language="java" pageEncoding="utf-8"%>
 <img src="<%=request.getContextPath()%>/images/top1.jpg"
 	class="img-responsive">
-
+	
 <nav class="navbar navbar-default" role="navigation">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -10,7 +10,7 @@
 				class="icon-bar"></span> <span class="icon-bar"></span> <span
 				class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="jsp/logout.jsp">注销</a>
+		<a class="navbar-brand" href="<%=request.getContextPath()%>/jsp/logout.jsp">注销</a>
 	</div>
 	<div class="collapse navbar-collapse" id="menu">
 		<ul class="nav navbar-nav" >
@@ -19,18 +19,7 @@
 			<li><a href="<%=request.getContextPath()%>/jsp/jsp-basic.jsp">JSP基础</a></li>
 			<li><a href="<%=request.getContextPath()%>/jsp/access-javabean.jsp">JSP访问JavaBean</a></li>
 			<li><a href="<%=request.getContextPath()%>/jsp/el.jsp">EL表达式</a></li>
-			<li class="dropdown"><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">JSTL标签 <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">JSTL Core标签</a></li>
-					<li class="divider"></li>
-					<li><a href="#">JSTL I18N标签</a></li>
-					<li class="divider"></li>
-					<li><a href="#">JSTL SQL标签</a></li>
-					<li class="divider"></li>
-					<li><a href="#">JSTL Functions标签</a></li>
-					<li class="divider"></li>
-				</ul></li>
+			<li><a href="<%=request.getContextPath()%>/jsp/jstl-tag.jsp">JSTL标签</a></li>
 		</ul>
 	</div>
 </nav>

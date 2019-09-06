@@ -13,12 +13,12 @@ public class UserBean implements Serializable {
 	private String name;
 	private String password;
 	private int age;
-	private char gender;
+	private String gender;
 
 	public UserBean() {
 	}
 	
-	public UserBean(String name, int age, char gender) {
+	public UserBean(String name, int age, String gender) {
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
@@ -48,11 +48,11 @@ public class UserBean implements Serializable {
 		this.age = age;
 	}
 
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
