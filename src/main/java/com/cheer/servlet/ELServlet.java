@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cheer.bean.UserBean;
 
-@WebServlet(name = "ELServlet", urlPatterns = { "/el-object-field","/el-array-collections"})
+@WebServlet(name = "ELServlet", urlPatterns = { "/el-object-field","/el-array-collections","/jstl-tag"})
 public class ELServlet extends HttpServlet {
 
 	/**

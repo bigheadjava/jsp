@@ -1,4 +1,5 @@
 <%@page language="java" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <img src="<%=request.getContextPath()%>/images/top1.jpg"
 	class="img-responsive">
 	
@@ -19,7 +20,7 @@
 			<li><a href="<%=request.getContextPath()%>/jsp/jsp-basic.jsp">JSP基础</a></li>
 			<li><a href="<%=request.getContextPath()%>/jsp/access-javabean.jsp">JSP访问JavaBean</a></li>
 			<li><a href="<%=request.getContextPath()%>/jsp/el.jsp">EL表达式</a></li>
-			<li><a href="<%=request.getContextPath()%>/jsp/jstl-tag.jsp">JSTL标签</a></li>
+			<li><a href="<%=request.getContextPath()%>/jstl-tag">JSTL标签</a></li>
 		</ul>
 	</div>
 </nav>
