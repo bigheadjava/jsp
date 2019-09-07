@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name="ParameterMessage",urlPatterns= {"/zh_msg_page","/en_msg_page"})
+@SuppressWarnings("serial")
 public class ParameterMessage extends HttpServlet {
 	
 	@Override
