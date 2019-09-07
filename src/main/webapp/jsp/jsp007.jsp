@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>静态包含</title>
+<title>动态包含</title>
 
 <!-- 引入Bootstrap必须的css文件 -->
 <link rel="stylesheet" type="text/css"
